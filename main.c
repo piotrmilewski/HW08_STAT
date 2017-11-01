@@ -87,7 +87,7 @@ int main(){
   char retStr[256];
   printf("Coherent file size of main.c: %s\n", prettyBytes( buff.st_size, 0, retStr));
 
-  char *retStr2[16];
+  char retStr2[16];
   printf("\nPermissions in the ls -l format: %s\n", lsifyPerms( buff.st_mode, retStr2));
 
   return 0;
