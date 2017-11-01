@@ -72,8 +72,8 @@ char *convertMode( int permissions, char *retStr){
 }
 
 char *lsifyPerms( int permissions, char *retStr){
-  char modeStr[16];
-  strcat( retStr, convertMode( permissions, modeStr));
+  char modeStr[11];
+  return strcat( retStr, convertMode( permissions, modeStr));
 }
 
 int main(){
@@ -88,7 +88,7 @@ int main(){
   char retStr[256];
   printf("Coherent file size of main.c: %s\n", prettyBytes( buff.st_size, 0, retStr));
 
-  char retStr2[1024];
+  char *retStr2;
   printf("\nPermissions in the ls -l format: %s\n", lsifyPerms( buff.st_mode, retStr2));
 
   return 0;
